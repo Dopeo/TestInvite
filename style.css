@@ -1,0 +1,241 @@
+*{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --color-primary: #6c63ff;
+  --color-sucess: #00bf8e;
+  --color-warning: #f7c94b;
+  --color-danger: #f75842;
+  --color-danger-variant: rgba(247, 88, 66, 0.4);
+  --color-white: #fff;
+  --color-light: rgba(255, 255, 255, 0.7);
+  --color-black: #000;
+  --color-bg: #1f2641;
+  --color-bg1: #2e3267;
+  --color-bg2: #424890;
+
+  --container-width-lg: 80%;
+  --container-width-md: 90%;
+  --container-width-sm: 100%;
+
+  --transition: all 400ms ease;
+}
+
+body{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: var(--color-black);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: var(--color-white);
+  padding: 0 23rem;
+  overflow: hidden;
+}
+
+.container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: var(--container-width-lg);
+  gap: 7rem
+}
+
+.left__container{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.invite__image{
+  display: flex;
+  height: 100dvh;
+  height: 100vh;
+  
+}
+
+.right__container{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.banner__image{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+h1{
+  color: white;
+  margin-top: 2.5rem;
+  margin-bottom: 3.5rem;
+}
+
+.name__input{
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 4.5rem;
+}
+
+.name__input input{
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 1rem;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+  color: darkgreen;
+  outline: none;
+  background-color:rgb(168, 168, 168);
+  text-align: center;
+}
+
+.name__input input::placeholder{
+  text-align: center;
+}
+
+.name__input input:focus{
+  box-shadow: 0 0 7px rgba(204, 204, 204, 0.753);
+}
+
+.selection__choices{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
+  gap: 3rem;
+}
+
+.selection__img{
+  width: 70%;
+  border-radius: 1rem;
+  transition: 300ms ease;
+  cursor: pointer;
+}
+
+.selection__img:hover{
+  scale: 1.1;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.7);
+}
+
+.submit-btn{
+  border:none;
+  border-radius: 15rem;
+  margin-bottom: 3rem;
+  transition: 300ms ease;
+}
+
+.submit-btn img{
+  border-radius: 15rem;
+  object-fit: cover;
+  object-position: -2px;
+  scale: 1.1;
+}
+
+.submit-btn:hover{
+  scale: 1.15;
+  background-color: transparent;
+  box-shadow: 0 0 40px rgb(245, 5, 5);
+  cursor: pointer;
+}
+
+.footer__container{
+  display: flex;
+  justify-content: center;
+}
+
+.footer__image{
+  border-radius: 1rem;
+  transition: 300ms ease;
+  margin-bottom: 0.5rem;
+}
+
+.footer__image:hover{
+  transform: scale(1.05);
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.7);
+}
+
+
+/* ========================================== Media Queries (tablets) ======================================== */
+
+@media screen and (max-width: 1480px) {
+  body{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    overflow:visible;
+  }
+
+  .container{
+    width: var(--container-width-md);
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+
+}
+
+
+
+/* ========================================== Media Queries (Phones) ======================================== */
+
+@media screen and (max-width: 600px) {
+  body{
+    display: flex;
+    justify-content: center;
+  }
+  .container{
+    width: var(--container-width-sm);
+    gap: 32rem;
+    align-content: center;
+    margin: 0 auto;
+  }
+
+  .invite__image{
+    display: flex;
+    transform: scale(1.56) translate(0, 9rem);
+    overflow-x: hidden;
+  }
+ 
+  .right__container{
+    width: var(--container-width-sm);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .banner__image img{
+    transform: scale(1.3)
+  }
+
+  h1{
+    font-size: 1.95rem;
+    padding: 2rem 0;
+  }
+
+  .form__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    margin: 0 auto;
+  }
+ 
+  .name__input{
+    display: flex;
+    align-items: center;
+  }
+
+  .name__input input{
+    font-size: 2rem;
+    width: 100%;
+   
+  
+  }
+}

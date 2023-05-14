@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>RSVP</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="#" />
+
+</head>
+<body>
+  
+<div class="container">
+
+
+  <header class="container left__container">
+      <img class="invite__image" id="rsvp__image" src="./images/rayne.png" alt="">
+  </header>
+
+
+  <div class="container right__container">
+    <div class="form__container">
+
+      <div class="banner__image">
+        <img src="./images/banner.png" alt="banner">
+      </div>
+
+        <form class="rsvp__form" id="rsvp__form">
+          <h1 class="title" id="title" >Please confirm if you will be attending</h1>
+
+            <div class="name__input">
+              <input type="text" name="firstName" id="firstName" placeholder="First Name" required minlength="2" autocomplete="off" autofocus>
+
+              <input type="text" name="lastName" id="lastName" placeholder="Last Name" required minlength="2" autocomplete="off">
+
+            </div>
+
+            <div class="selection__choices">
+              <label type="radio" name="yes">
+                <img class="selection__img" src="./images/yes.png" alt="yes">
+              </label>
+
+              <label type="radio" name="no">
+                <img class="selection__img" src="./images/no.png" alt="no">
+              </label>
+            </div>
+
+            <button id="submit-btn" class="submit-btn"><img src="./images/submit-img.png" alt="submit"></button>
+            
+          <div class="container footer__container">
+            <a href="https://www.sweetpeacreations.co.uk/" target="blank" ><img class="footer__image" id="footer__image" src="./images/footer.png" alt="footer"></a>
+          </div>
+        </form>
+        
+    </div>
+  </div>
+
+</div>
+
+
+  <script src="/index.js"></script>
+</body>
+</html>
